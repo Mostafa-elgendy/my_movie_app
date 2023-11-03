@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
+import 'package:my_movie_app/core/utils/app_router.dart';
 import 'package:my_movie_app/core/utils/styles.dart';
 
 class HomeViewSeries extends StatelessWidget {
@@ -8,7 +10,7 @@ class HomeViewSeries extends StatelessWidget {
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: () {
-        //  GoRouter.of(context).push(AppRouter.kMoviesHomeView);
+        GoRouter.of(context).push(AppRouter.kSeriesHomeView);
       },
       child: Container(
         decoration: BoxDecoration(

@@ -1,14 +1,14 @@
 import 'package:dartz/dartz.dart';
 import 'package:dio/dio.dart';
 import 'package:my_movie_app/core/errors/failure.dart';
-import 'package:my_movie_app/core/utils/api_services.dart';
+import 'package:my_movie_app/core/utils/api_movie_services.dart';
 import 'package:my_movie_app/core/utils/firebase_services.dart';
 import 'package:my_movie_app/features/details/data/models/actor_model.dart';
 import 'package:my_movie_app/features/details/data/repos/details_repo.dart';
 import 'package:my_movie_app/core/utils/movie_model.dart';
 
 class DetailsRepoImpl extends DetailsRepo {
-  final ApiService apiService;
+  final ApiMoviesService apiService;
   final FirebaseServices firebaseServices;
 
   DetailsRepoImpl(this.apiService, this.firebaseServices);

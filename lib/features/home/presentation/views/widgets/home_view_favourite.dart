@@ -3,8 +3,8 @@ import 'package:go_router/go_router.dart';
 import 'package:my_movie_app/core/utils/app_router.dart';
 import 'package:my_movie_app/core/utils/styles.dart';
 
-class HomeViewEditProfile extends StatelessWidget {
-  const HomeViewEditProfile({super.key});
+class HomeViewFavourite extends StatelessWidget {
+  const HomeViewFavourite({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -23,7 +23,7 @@ class HomeViewEditProfile extends StatelessWidget {
         padding: const EdgeInsets.all(8),
         child: Center(
           child: Text(
-            'Edit Profile',
+            'View My Favourite',
             textAlign: TextAlign.center,
             style: Styles.textStyle18.copyWith(color: Colors.white),
           ),

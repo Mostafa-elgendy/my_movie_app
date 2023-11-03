@@ -15,6 +15,11 @@ import 'package:my_movie_app/features/movies_home/presentation/view_models/trend
 import 'package:my_movie_app/features/movies_home/presentation/view_models/upcoming_movies/upcoming_movies_cubit.dart';
 import 'package:my_movie_app/features/register/data/repos/register_repo_impl.dart';
 import 'package:my_movie_app/features/register/presentation/view_models/register_cubit/register_user_cubit.dart';
+import 'package:my_movie_app/features/series_home/data/repos/home_series_repo_impl.dart';
+import 'package:my_movie_app/features/series_home/presentation/view_models/airing_today/airing_today_series_cubit.dart';
+import 'package:my_movie_app/features/series_home/presentation/view_models/on_the_air/on_the_air_series_cubit.dart';
+import 'package:my_movie_app/features/series_home/presentation/view_models/popular/popular_series_cubit.dart';
+import 'package:my_movie_app/features/series_home/presentation/view_models/top_rated/top_rated_series_cubit.dart';
 import 'package:my_movie_app/firebase_options.dart';
 
 void main() async {
@@ -60,6 +65,26 @@ class MovieApp extends StatelessWidget {
         BlocProvider(
           create: (context) => NowPlayingMoviesCubit(getIt.get<HomeRepoImpl>())
             ..fetchNowPlayingMovies(),
+        ),
+        BlocProvider(
+          create: (context) =>
+              AiringTodaySeriesCubit(getIt.get<HomeSeriesRepoImpl>())
+                ..fetchAiringTodaySeries(),
+        ),
+        BlocProvider(
+          create: (context) =>
+              OnTheAirSeriesCubit(getIt.get<HomeSeriesRepoImpl>())
+                ..fetchOnTheAirSeries(),
+        ),
+        BlocProvider(
+          create: (context) =>
+              PopularSeriesCubit(getIt.get<HomeSeriesRepoImpl>())
+                ..fetchPopularSeries(),
+        ),
+        BlocProvider(
+          create: (context) =>
+              TopRatedSeriesCubit(getIt.get<HomeSeriesRepoImpl>())
+                ..fetchTopRatedSeries(),
         ),
       ],
       child: MaterialApp.router(

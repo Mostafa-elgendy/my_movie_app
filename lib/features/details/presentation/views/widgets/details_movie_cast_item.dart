@@ -2,8 +2,6 @@ import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:my_movie_app/core/utils/app_router.dart';
-import 'package:my_movie_app/core/utils/assets.dart';
-import 'package:my_movie_app/core/utils/movie_model.dart';
 import 'package:my_movie_app/features/details/data/models/actor_model.dart';
 
 class DetailsMovieCastItem extends StatelessWidget {

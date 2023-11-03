@@ -1,12 +1,12 @@
 import 'package:dartz/dartz.dart';
 import 'package:dio/dio.dart';
 import 'package:my_movie_app/core/errors/failure.dart';
-import 'package:my_movie_app/core/utils/api_services.dart';
+import 'package:my_movie_app/core/utils/api_movie_services.dart';
 import 'package:my_movie_app/features/movies_home/data/repos/home_repo.dart';
 import 'package:my_movie_app/core/utils/movie_model.dart';
 
 class HomeRepoImpl extends HomeRepo {
-  final ApiService apiService;
+  final ApiMoviesService apiService;
 
   HomeRepoImpl(this.apiService);
 

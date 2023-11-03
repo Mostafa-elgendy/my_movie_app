@@ -14,11 +14,13 @@ import 'package:my_movie_app/features/home/presentation/views/home_view.dart';
 import 'package:my_movie_app/features/login/presentation/views/login_view.dart';
 import 'package:my_movie_app/features/movies_home/presentation/views/movies_home_view.dart';
 import 'package:my_movie_app/features/register/presentation/views/register_view.dart';
+import 'package:my_movie_app/features/series_home/presentation/views/series_home_view.dart';
 import 'package:my_movie_app/features/splash/presentation/views/splash_view.dart';
 
 abstract class AppRouter {
   static const kHomeView = '/homeView';
   static const kMoviesHomeView = "/moviesHomeView";
+  static const kSeriesHomeView = "/seriesHomeView";
   static const kMovieDetailsView = '/movieDetailsView';
   static const kLoginView = '/loginView';
   static const kRegisterView = '/registerView';
@@ -41,6 +43,10 @@ abstract class AppRouter {
       GoRoute(
         path: kMoviesHomeView,
         builder: (context, state) => const MoviesHomeView(),
+      ),
+      GoRoute(
+        path: kSeriesHomeView,
+        builder: (context, state) => const SeriesHomeView(),
       ),
       GoRoute(
         path: kHomeView,

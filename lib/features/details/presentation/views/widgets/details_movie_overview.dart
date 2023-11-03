@@ -61,10 +61,10 @@ class DetailsMovieOverview extends StatelessWidget {
           Navigator.pop(context);
         } else if (state is AddFavouriteFailure) {
           //dialog error
-          print(state.errMessage);
+          //  print(state.errMessage);
         } else {
           // dialog loading
-          print("loading");
+          // print("loading");
           showLoaderDialog(context);
         }
       },
