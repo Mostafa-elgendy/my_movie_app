@@ -14,6 +14,10 @@ class RegisterFailure extends Failure {
   RegisterFailure(super.message);
 }
 
+class FirebaseFailure extends Failure {
+  FirebaseFailure(super.message);
+}
+
 class ServerFailure extends Failure {
   ServerFailure(super.message);
   factory ServerFailure.fromDioException(DioException dioException) {

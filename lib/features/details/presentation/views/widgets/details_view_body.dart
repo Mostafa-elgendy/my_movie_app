@@ -16,26 +16,33 @@ class DetailsViewBody extends StatelessWidget {
         children: [
           DetailsViewMoviePoster(
             posterPath: movieModel.posterPath!,
+            title: movieModel.title!,
           ),
-          DetailsMovieOverview(overview: movieModel.overview),
+          DetailsMovieOverview(movieModel: movieModel),
           const SizedBox(height: 10.0),
           const Align(
             alignment: Alignment.topLeft,
             child: Text(
-              'Cast',
+              '  Cast',
               style: Styles.textStyle18,
             ),
           ),
-          const DetailsMoviesCastList(),
+          const Padding(
+            padding: EdgeInsets.only(right: 5.0),
+            child: DetailsMoviesCastList(),
+          ),
           const SizedBox(height: 10.0),
           const Align(
             alignment: Alignment.topLeft,
             child: Text(
-              'Similar movies',
+              '  Similar movies',
               style: Styles.textStyle18,
             ),
           ),
-          const DetailsSimilarMoviesList(),
+          const Padding(
+            padding: EdgeInsets.only(right: 5.0),
+            child: DetailsSimilarMoviesList(),
+          ),
         ],
       ),
     );

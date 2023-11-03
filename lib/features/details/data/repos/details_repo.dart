@@ -8,4 +8,6 @@ abstract class DetailsRepo {
       {required int movieId});
   Future<Either<Failure, List<ActorModel>>> fetchMovieCast(
       {required int movieId});
+  Future<Either<Failure, void>> addToFavourite(
+      {required MovieModel movieModel});
 }

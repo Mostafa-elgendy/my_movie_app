@@ -5,7 +5,7 @@ import 'package:my_movie_app/features/movies_home/presentation/views/widgets/hom
 import 'package:my_movie_app/features/movies_home/presentation/views/widgets/home_top_rated_movies_list.dart';
 import 'package:my_movie_app/features/movies_home/presentation/views/widgets/home_trending_movies.dart';
 import 'package:my_movie_app/features/movies_home/presentation/views/widgets/home_upcoming_movies_list.dart';
-import 'package:my_movie_app/features/movies_home/presentation/views/widgets/movie_app_bar.dart';
+import 'package:my_movie_app/core/widgets/movie_app_bar.dart';
 
 class MoviesHomeViewBody extends StatelessWidget {
   const MoviesHomeViewBody({super.key});

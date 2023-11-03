@@ -3,8 +3,13 @@ import 'package:flutter/material.dart';
 import 'package:my_movie_app/core/utils/styles.dart';
 
 class DetailsViewMoviePoster extends StatelessWidget {
-  const DetailsViewMoviePoster({super.key, required this.posterPath});
+  const DetailsViewMoviePoster({
+    super.key,
+    required this.posterPath,
+    required this.title,
+  });
   final String posterPath;
+  final String title;
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -32,7 +37,7 @@ class DetailsViewMoviePoster extends StatelessWidget {
             Align(
               alignment: Alignment.center,
               child: Text(
-                "Movie Title",
+                title,
                 style: Styles.textStyle18.copyWith(fontWeight: FontWeight.bold),
               ),
             ),
